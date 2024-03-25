@@ -28,7 +28,7 @@ const FlashSell = () => {
                   $59
                 </a>
               </p>
-              <button className="flex items-center gap-2 bg-[#cefff86e] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
+              <button className="flex items-center gap-2 bg-[#cefff8] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
                 <IoMdCart className="text-[#E85363]" />
                 Add
               </button>
@@ -48,7 +48,7 @@ const FlashSell = () => {
                   $59
                 </a>
               </p>
-              <button className="flex items-center gap-2 bg-[#cefff86e] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
+              <button className="flex items-center gap-2 bg-[#cefff8] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
                 <IoMdCart className="text-[#E85363]" />
                 Add
               </button>
@@ -68,7 +68,7 @@ const FlashSell = () => {
                   $59
                 </a>
               </p>
-              <button className="flex items-center gap-2 bg-[#cefff86e] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
+              <button className="flex items-center gap-2 bg-[#cefff8] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
                 <IoMdCart className="text-[#E85363]" />
                 Add
               </button>
@@ -88,7 +88,7 @@ const FlashSell = () => {
                   $59
                 </a>
               </p>
-              <button className="flex items-center gap-2 bg-[#cefff86e] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
+              <button className="flex items-center gap-2 bg-[#cefff8] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
                 <IoMdCart className="text-[#E85363]" />
                 Add
               </button>
