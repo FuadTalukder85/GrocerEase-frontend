@@ -1,7 +1,6 @@
 import FlashSell from "@/components/flashSell/FlashSell";
 import HeroSection from "@/components/herosection/HeroSection";
 import ProductCategory from "@/components/productCategory/ProductCategory";
-import Footer from "@/components/shared/footer/Footer";
 import TrendingProduct from "@/components/trendingProduct/TrendingProduct";
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
       <FlashSell></FlashSell>
       <ProductCategory></ProductCategory>
       <TrendingProduct></TrendingProduct>
-      <Footer></Footer>
     </div>
   );
 }
