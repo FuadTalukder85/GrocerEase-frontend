@@ -6,7 +6,7 @@ import flashImg from "../../assets/flashImg1.png";
 
 const FlashSell = () => {
   return (
-    <div>
+    <div className="mt-10">
       <div className="flex justify-between">
         <h1 className="text-3xl font-semibold text-[#333333]">
           Today,s Flash Sale
@@ -16,7 +16,7 @@ const FlashSell = () => {
         </h1>
       </div>
       <div className="grid grid-cols-4 gap-5 mt-5">
-        <div className="border border-[#5DD2C0]">
+        <div className="border shadow-xl">
           <Image src={flashImg} alt="flashImg"></Image>
           <div className="p-5 px-10">
             <p className="text-[#E85363] font-semibold">
@@ -36,7 +36,7 @@ const FlashSell = () => {
           </div>
           <div className="bg-[#5DD2C0] py-[2px]"></div>
         </div>
-        <div className="border border-[#5DD2C0]">
+        <div className="border shadow-xl">
           <Image src={flashImg} alt="flashImg"></Image>
           <div className="p-5 px-10">
             <p className="text-[#E85363] font-semibold">
@@ -56,7 +56,7 @@ const FlashSell = () => {
           </div>
           <div className="bg-[#5DD2C0] py-[2px]"></div>
         </div>
-        <div className="border border-[#5DD2C0]">
+        <div className="border shadow-xl">
           <Image src={flashImg} alt="flashImg"></Image>
           <div className="p-5 px-10">
             <p className="text-[#E85363] font-semibold">
@@ -76,7 +76,7 @@ const FlashSell = () => {
           </div>
           <div className="bg-[#5DD2C0] py-[2px]"></div>
         </div>
-        <div className="border border-[#5DD2C0]">
+        <div className="border shadow-xl">
           <Image src={flashImg} alt="flashImg"></Image>
           <div className="p-5 px-10">
             <p className="text-[#E85363] font-semibold">

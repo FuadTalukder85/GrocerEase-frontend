@@ -6,7 +6,6 @@ import TrendingProduct from "@/components/trendingProduct/TrendingProduct";
 export default function Home() {
   return (
     <div>
-      <h1 className="text-7xl">This is main page</h1>
       <HeroSection></HeroSection>
       <FlashSell></FlashSell>
       <ProductCategory></ProductCategory>

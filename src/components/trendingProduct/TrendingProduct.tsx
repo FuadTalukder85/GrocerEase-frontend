@@ -11,7 +11,7 @@ const TrendingProduct = () => {
         Top Trending Products
       </h1>
       <div className="grid grid-cols-6 gap-5 mt-5">
-        <div className="bg-[#cefff86e] pb-5 text-center shadow-2xl">
+        <div className="bg-[#cefff86e] pb-5 text-center shadow-xl">
           <Image
             src={trendingImg}
             className="mx-auto"
@@ -31,7 +31,7 @@ const TrendingProduct = () => {
           </div>
           <div className="bg-[#5DD2C0] py-[2px]"></div>
         </div>
-        <div className="bg-[#cefff86e] pb-5 text-center shadow-2xl">
+        <div className="bg-[#cefff86e] pb-5 text-center shadow-xl">
           <Image
             src={trendingImg}
             className="mx-auto"
@@ -51,7 +51,7 @@ const TrendingProduct = () => {
           </div>
           <div className="bg-[#5DD2C0] py-[2px]"></div>
         </div>
-        <div className="bg-[#cefff86e] pb-5 text-center shadow-2xl">
+        <div className="bg-[#cefff86e] pb-5 text-center shadow-xl">
           <Image
             src={trendingImg}
             className="mx-auto"
@@ -71,7 +71,7 @@ const TrendingProduct = () => {
           </div>
           <div className="bg-[#5DD2C0] py-[2px]"></div>
         </div>
-        <div className="bg-[#cefff86e] pb-5 text-center shadow-2xl">
+        <div className="bg-[#cefff86e] pb-5 text-center shadow-xl">
           <Image
             src={trendingImg}
             className="mx-auto"
@@ -91,7 +91,7 @@ const TrendingProduct = () => {
           </div>
           <div className="bg-[#5DD2C0] py-[2px]"></div>
         </div>
-        <div className="bg-[#cefff86e] pb-5 text-center shadow-2xl">
+        <div className="bg-[#cefff86e] pb-5 text-center shadow-xl">
           <Image
             src={trendingImg}
             className="mx-auto"
@@ -111,7 +111,7 @@ const TrendingProduct = () => {
           </div>
           <div className="bg-[#5DD2C0] py-[2px]"></div>
         </div>
-        <div className="bg-[#cefff86e] pb-5 text-center shadow-2xl">
+        <div className="bg-[#cefff86e] pb-5 text-center shadow-xl">
           <Image
             src={trendingImg}
             className="mx-auto"
