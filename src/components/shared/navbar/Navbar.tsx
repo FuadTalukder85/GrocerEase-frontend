@@ -10,8 +10,8 @@ const Navbar = () => {
   return (
     <div className=" text-[#333333] text-center pt-3">
       <div className="">
-        <div className="navbar">
-          <div className="navbar-start">
+        <div className="flex justify-between items-center">
+          <div className="w-[35%]">
             <div className="dropdown">
               <div
                 tabIndex={0}
@@ -54,26 +54,29 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <Link href="/" className="pr-5">
-              <Image src={logo} alt="logo"></Image>
-            </Link>
-            <div className="w-full">
-              <input
-                type="text"
-                placeholder="Search your grocery"
-                className="border py-3 ps-5 w-full rounded-full"
-              />
+            <div className="flex gap-7 items-center">
+              <Link href="/" className="pr-5 w-[150px]">
+                <Image src={logo} alt="logo"></Image>
+              </Link>
+              <div className="w-full">
+                <input
+                  type="text"
+                  placeholder="Search your grocery"
+                  className="border py-3 ps-5 w-full rounded-full"
+                />
+              </div>
             </div>
           </div>
-          <div className="navbar-end hidden lg:flex">
+          <div className=" hidden lg:flex">
             <ul className="menu menu-horizontal px-1 flex gap-10 text-lg font-medium">
-              <li>Home</li>
-              <li>Product</li>
+              <Link href="/">Home</Link>
+              <Link href="/product">Product</Link>
               <li>Collection</li>
               <li>Mega Menu</li>
+              <Link href="/dashboard">Dashboard</Link>
             </ul>
           </div>
-          <div className="navbar-end">
+          <div className="">
             <ul className="flex gap-10 items-center justify-between">
               <li className="flex items-center gap-3 text-lg font-medium">
                 <IoMdCart className="text-[#E85363]" />
