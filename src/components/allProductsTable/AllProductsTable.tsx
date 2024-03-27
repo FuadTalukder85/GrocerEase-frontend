@@ -4,11 +4,16 @@ import { MdEditSquare } from "react-icons/md";
 import { AiFillDelete } from "react-icons/ai";
 import { AllProductValues } from "../types.tsx/types";
 
+export type AllStateType = {
+  totalProducts: number;
+};
+
 const AllProductsTable = ({
   allProductsTable,
   allState,
 }: {
   allProductsTable: AllProductValues[];
+  allState: AllStateType;
 }) => {
   console.log("allProductsTable >", allProductsTable);
   return (

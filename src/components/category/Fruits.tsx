@@ -1,22 +1,17 @@
 "use client";
-import Image from "next/image";
 import { IoMdCart } from "react-icons/io";
-import { AllProductValues } from "../types.tsx/types";
+import Image from "next/image";
 import Link from "next/link";
+import { AllProductValues } from "../types.tsx/types";
 
-const AllProductPage = ({
-  allProducts,
-}: {
-  allProducts: AllProductValues[];
-}) => {
-  console.log("allProducts home > ", allProducts);
+const Fruits = ({ fruitsItem }: { fruitsItem: AllProductValues[] }) => {
   return (
-    <div className="grid grid-cols-6 gap-5 mt-5">
-      {allProducts.map((product) => (
-        <div key={product._id} className="border shadow-xl">
-          <Link href={`/product/${product._id}`}>
+    <div className="grid grid-cols-6 gap-5 mt-10">
+      {fruitsItem.map((fruits) => (
+        <div key={fruits._id} className="border shadow-xl">
+          <Link href={`/fruits/${fruits._id}`}>
             <Image
-              src={product.image}
+              src={fruits.image}
               alt="product1"
               width={200}
               height={200}
@@ -24,13 +19,13 @@ const AllProductPage = ({
             ></Image>
             <div className="mt-5">
               <p className="text-[#E85363] font-semibold max-w-[15ch] mx-auto text-center">
-                {product.title}
+                {fruits.title}
               </p>
             </div>
           </Link>
           <div className="flex justify-between px-5 pb-5 mt-3">
             <p>
-              {product.price} <small className="line-through">$89,74</small>
+              {fruits.price} <small className="line-through">$89,74</small>
             </p>
             <button className="flex items-center gap-2 bg-[#cefff8] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
               <IoMdCart className="text-[#E85363]" />
@@ -43,4 +38,4 @@ const AllProductPage = ({
   );
 };
 
-export default AllProductPage;
+export default Fruits;
