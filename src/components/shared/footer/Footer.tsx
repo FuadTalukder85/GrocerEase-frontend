@@ -10,6 +10,7 @@ import { FaYoutube } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
 import "./Footer.css";
 import FooterBottom from "./FooterBottom";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -44,10 +45,30 @@ const Footer = () => {
           </p>
         </div>
         <div className="">
+          <h1 className="text-2xl text-[#E85363] font-semibold">Popular</h1>
+          <ul className="">
+            <li className="mt-5">
+              <span>Trending Products</span>
+            </li>
+            <li className="mt-2">
+              <span>Categories</span>
+            </li>
+            <li className="mt-5">
+              <Link href="/aboutUs">About Us</Link>
+            </li>
+            <li className="mt-2">
+              <span>Contact Us</span>
+            </li>
+            <li className="mt-2">
+              <span>Customer Care</span>
+            </li>
+          </ul>
+        </div>
+        <div className="">
           <h1 className="text-2xl text-[#E85363] font-semibold">Company</h1>
           <ul className="">
             <li className="mt-5">
-              <span>About Us</span>
+              <span>Become a vendor</span>
             </li>
             <li className="mt-2">
               <span>Delivery Information</span>
@@ -59,9 +80,6 @@ const Footer = () => {
               <span>Terms & Conditions</span>
             </li>
             <li className="mt-2">
-              <span>Contact Us</span>
-            </li>
-            <li className="mt-2">
               <span>Support Center</span>
             </li>
           </ul>
@@ -71,9 +89,6 @@ const Footer = () => {
           <ul className="">
             <li className="mt-5">
               <span>Sign In</span>
-            </li>
-            <li className="mt-2">
-              <span>View Cart</span>
             </li>
             <li className="mt-2">
               <span>My Wishlist</span>
@@ -102,36 +117,10 @@ const Footer = () => {
               <span>Farm Business</span>
             </li>
             <li className="mt-2">
-              <span>Farm Careers</span>
-            </li>
-            <li className="mt-2">
               <span>Our Suppliers</span>
             </li>
             <li className="mt-2">
               <span>Promotions</span>
-            </li>
-          </ul>
-        </div>
-        <div className="">
-          <h1 className="text-2xl text-[#E85363] font-semibold">Popular</h1>
-          <ul className="">
-            <li className="mt-5">
-              <span>Milk & Flavoured Milk</span>
-            </li>
-            <li className="mt-2">
-              <span>Butter and Margarine</span>
-            </li>
-            <li className="mt-2">
-              <span>Eggs Substitutes</span>
-            </li>
-            <li className="mt-2">
-              <span>Marmalades</span>
-            </li>
-            <li className="mt-2">
-              <span>Sour Cream and Dips</span>
-            </li>
-            <li className="mt-2">
-              <span>Tea & Kombucha</span>
             </li>
           </ul>
         </div>
