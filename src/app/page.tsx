@@ -3,7 +3,7 @@ import HeroSection from "@/components/herosection/HeroSection";
 import ProductCategory from "@/components/productCategory/ProductCategory";
 import TrendingProduct from "@/components/trendingProduct/TrendingProduct";
 
-export default function Home() {
+const Home = async () => {
   return (
     <div>
       <HeroSection></HeroSection>
@@ -12,4 +12,6 @@ export default function Home() {
       <TrendingProduct></TrendingProduct>
     </div>
   );
-}
+};
+
+export default Home;

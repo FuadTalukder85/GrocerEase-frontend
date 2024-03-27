@@ -10,9 +10,7 @@ const AllProductsTable = () => {
           {/* head */}
           <thead>
             <tr>
-              <th>
-                <label>SL NO</label>
-              </th>
+              <th className="text-lg text-[#333333]">SL NO.</th>
               <th className="text-lg text-[#333333]">Product Items</th>
               <th className="text-lg text-[#333333]">Product ID</th>
               <th className="text-lg text-[#333333]">Price</th>
