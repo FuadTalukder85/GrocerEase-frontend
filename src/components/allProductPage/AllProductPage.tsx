@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { IoMdCart } from "react-icons/io";
 import { AllProductValues } from "../types.tsx/types";
+import Link from "next/link";
 
 const AllProductPage = ({
   allProducts,
@@ -10,10 +11,10 @@ const AllProductPage = ({
 }) => {
   console.log("allProducts home > ", allProducts);
   return (
-    <div>
-      <div className="grid grid-cols-6 gap-5 mt-5">
-        {allProducts.map((product) => (
-          <div key={product._id} className="border shadow-xl">
+    <div className="grid grid-cols-6 gap-5 mt-5">
+      {allProducts.map((product) => (
+        <Link key={product._id} href={`/product/${product._id}`}>
+          <div className="border shadow-xl">
             <Image
               src={product.image}
               alt="product1"
@@ -36,8 +37,8 @@ const AllProductPage = ({
               </div>
             </div>
           </div>
-        ))}
-      </div>
+        </Link>
+      ))}
     </div>
   );
 };

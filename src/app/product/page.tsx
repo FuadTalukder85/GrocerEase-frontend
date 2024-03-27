@@ -2,8 +2,12 @@
 
 import AllProductPage from "@/components/allProductPage/AllProductPage";
 
-const Server = async () => {
-  const res = await fetch(`${process.env.BACKEND_URL}/all-product`);
+const ProductServer = async () => {
+  const res = await fetch(`${process.env.BACKEND_URL}/all-product`, {
+    next: {
+      revalidate: 30,
+    },
+  });
   const allProducts = await res.json();
   console.log(allProducts);
 
@@ -15,4 +19,4 @@ const Server = async () => {
   );
 };
 
-export default Server;
+export default ProductServer;

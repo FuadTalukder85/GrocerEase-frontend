@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import categoryImg from "../../assets/category-1.png";
 import categor1 from "../../assets/category/meat1.png";
 import categor2 from "../../assets/category/fish2.png";
 import categor3 from "../../assets/category/vagetable3.png";
