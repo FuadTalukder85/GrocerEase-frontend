@@ -1,23 +1,23 @@
 "use server";
 
-import VegetableCard from "@/components/categoryCard/VegetableDetailsCard";
+import MeatDetailsCard from "@/components/categoryCard/MeatDetailsCard";
 
-type VegetableId = {
+type MeatId = {
   params: {
-    vegetableId: string;
+    meatId: string;
   };
 };
 
-const meatDetails = async ({ params }: VegetableId) => {
+const meatDetails = async ({ params }: MeatId) => {
   console.log(params);
   const res = await fetch(
-    `${process.env.BACKEND_URL}/all-product/${params.vegetableId}`
+    `${process.env.BACKEND_URL}/all-product/${params.meatId}`
   );
-  const vegetableDetails = await res.json();
+  const meatDetails = await res.json();
   console.log(meatDetails);
   return (
     <div>
-      <VegetableCard vegetableDetails={vegetableDetails}></VegetableCard>
+      <MeatDetailsCard meatDetails={meatDetails}></MeatDetailsCard>
     </div>
   );
 };
