@@ -18,7 +18,7 @@ const AllProductsTable = ({
   console.log("allProductsTable >", allProductsTable);
   return (
     <div className="mt-5">
-      <h1 className="text-3xl font-semibold text-[#333333]">
+      <h1 className="text-xl md:text-3xl font-semibold text-[#333333]">
         All Products :{" "}
         <span className="text-[#E85363]">{allState.totalProducts}</span>
       </h1>
@@ -26,14 +26,29 @@ const AllProductsTable = ({
         <table className="table">
           {/* head */}
           <thead>
-            <tr>
-              <th className="text-lg text-[#333333]">SL NO.</th>
-              <th className="text-lg text-[#333333]">Product Image</th>
-              <th className="text-lg text-[#333333]">Product Title</th>
-              <th className="text-lg text-[#333333]">Product ID</th>
-              <th className="text-lg text-[#333333]">Price</th>
-              <th className="text-lg text-[#333333] text-center">Update</th>
-              <th className="text-lg text-[#333333] text-center">Delete</th>
+            <tr className="">
+              <th className="md:hidden md:text-lg text-[#333333]">*</th>
+              <th className="hidden md:table-cell md:text-lg text-[#333333]">
+                SL NO.
+              </th>
+
+              <th className="hidden md:text-lg text-[#333333]">
+                Product Image
+              </th>
+              <th className="hidden md:table-cell md:text-lg text-[#333333]">
+                Product Image
+              </th>
+
+              <th className="md:hidden text-[#333333]">Title</th>
+              <th className="hidden md:table-cell md:text-lg text-[#333333]">
+                Product Title
+              </th>
+              <th className="hidden md:table-cell md:text-lg text-[#333333]">
+                Product ID
+              </th>
+              <th className="md:text-lg text-[#333333]">Price</th>
+              <th className="md:text-lg text-[#333333] text-center">Update</th>
+              <th className="md:text-lg text-[#333333] text-center">Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -41,11 +56,11 @@ const AllProductsTable = ({
             {allProductsTable.map((product, index) => (
               <tr key={product._id}>
                 <th>
-                  <label className="text-[#E85363] font-bold">
+                  <label className="text-[#E85363] md:font-bold">
                     {index + 1}
                   </label>
                 </th>
-                <td>
+                <td className="hidden md:table-cell">
                   <div className="flex items-center gap-3">
                     <div className="avatar">
                       <div className="mask mask-squircle">
@@ -61,11 +76,13 @@ const AllProductsTable = ({
                 </td>
                 <td>
                   <div>
-                    <div className="font-bold">{product.title}</div>
+                    <div className="md:font-bold">{product.title}</div>
                   </div>
                 </td>
-                <td className="font-bold">{product._id}</td>
-                <td className="font-bold">${product.price}</td>
+                <td className="hidden md:table-cell md:font-bold">
+                  {product._id}
+                </td>
+                <td className="md:font-bold">${product.price}</td>
                 <td className="flex items-center justify-center text-[#E85363] text-4xl">
                   <div className="flex items-center justify-center text-[#E85363] text-4xl">
                     <MdEditSquare />

@@ -36,7 +36,7 @@ const AddProducts = () => {
       <div className="my-10">
         <h1 className="text-center text-4xl mb-5">Add your product</h1>
         <div className="">
-          <div className="card w-[50%] mx-auto h-[80%] shadow-xl bg-base-100">
+          <div className="card md:w-[50%] mx-auto h-[80%] shadow-xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control ">
                 <label className="label">
@@ -64,7 +64,7 @@ const AddProducts = () => {
                   <small className="text-red-500 ">Title is required</small>
                 )}
               </div>
-              <div className="flex justify-between gap-5">
+              <div className="md:flex justify-between gap-5">
                 <div className="form-control  w-full">
                   <label className="label">
                     <span className="label-text">Price *</span>
@@ -77,7 +77,9 @@ const AddProducts = () => {
                     className="input input-bordered"
                   />
                   {errors.price && (
-                    <small className="text-red-500 ">Price is required</small>
+                    <small className="text-red-500 ">
+                      Discount price is required
+                    </small>
                   )}
                 </div>
                 <div className="form-control  w-full">
@@ -96,7 +98,7 @@ const AddProducts = () => {
                   )}
                 </div>
               </div>
-              <div className="flex justify-between gap-5">
+              <div className="md:flex justify-between gap-5">
                 <div className="form-control  w-full">
                   <label className="label">
                     <span className="label-text">Rating *</span>

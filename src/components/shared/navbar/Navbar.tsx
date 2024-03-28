@@ -10,17 +10,29 @@ const Navbar = () => {
   return (
     <div className=" text-[#333333] text-center pt-3">
       <div className="">
-        <div className="flex justify-between items-center">
-          <div className="w-[35%]">
-            <div className="dropdown">
+        <div className="md:grid grid-cols-9 gap-10 justify-center items-center">
+          <div className="col-span-4">
+            <div className="flex gap-7 items-center pt-4">
+              <Link href="/" className="w-[150px]">
+                <Image src={logo} alt="logo"></Image>
+              </Link>
+              <div className="w-full">
+                <input
+                  type="text"
+                  placeholder="Search your grocery"
+                  className="border py-3 ps-5 w-full rounded-full"
+                />
+              </div>
+            </div>
+            <div className="dropdown flex justify-start mt-5">
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost lg:hidden"
+                className="btn btn-ghost lg:hidden pr-10"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="h-10 w-10"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -35,39 +47,47 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                className="menu menu-sm dropdown-content z-[1] p-2 shadow bg-[#E85363] rounded-box w-32 mt-12"
               >
-                <li>Home</li>
-                <li>
-                  <a>Parent</a>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
+                <Link href="/" className="bg-[#5DD2C0] rounded text-white">
+                  Home
+                </Link>
+                <Link
+                  href="/product"
+                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                >
+                  Product
+                </Link>
+                <li className="bg-[#5DD2C0] rounded text-white mt-2">
+                  Collection
                 </li>
-                <li>
-                  <a>Item 3</a>
+                <Link
+                  href="/aboutUs"
+                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                >
+                  Dashboard
+                </Link>
+              </ul>
+              <ul className="flex gap-7 md:hidden justify-center items-center">
+                <li className="flex items-center gap-3 text-lg font-medium">
+                  <IoMdCart className="text-[#E85363]" />
+                  <span>Wishlist</span>
                 </li>
+                <li className="flex items-center gap-3 text-lg font-medium">
+                  <FaRegHeart className="text-[#E85363]" />
+                  <span>Cart</span>
+                </li>
+                <li className="text-lg font-medium">Login</li>
               </ul>
             </div>
-            <div className="flex gap-7 items-center">
-              <Link href="/" className="pr-5 w-[150px]">
-                <Image src={logo} alt="logo"></Image>
-              </Link>
-              <div className="w-full">
-                <input
-                  type="text"
-                  placeholder="Search your grocery"
-                  className="border py-3 ps-5 w-full rounded-full"
-                />
-              </div>
-            </div>
           </div>
-          <div className=" hidden lg:flex">
+          <div className="col-span-3 hidden lg:flex">
             <ul className="menu menu-horizontal px-1 flex gap-10 text-lg font-medium">
               <Link href="/">Home</Link>
               <Link href="/product">Product</Link>
@@ -76,8 +96,8 @@ const Navbar = () => {
               <Link href="/dashboard">Dashboard</Link>
             </ul>
           </div>
-          <div className="">
-            <ul className="flex gap-10 items-center justify-between">
+          <div className="col-span-2">
+            <ul className="hidden md:flex gap-10 justify-center md:justify-end">
               <li className="flex items-center gap-3 text-lg font-medium">
                 <IoMdCart className="text-[#E85363]" />
                 <span>Wishlist</span>

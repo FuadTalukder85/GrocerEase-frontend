@@ -30,7 +30,7 @@ const ContactForm = () => {
               </div>
             </div>
 
-            <div className="md:flex justify-between mt-5">
+            <div className="md:flex justify-between items-center gap-10 mt-5">
               <textarea className="w-full py-5 border"></textarea>
               <div className="form-control mt-5 md:mt-0">
                 <button

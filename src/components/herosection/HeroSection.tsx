@@ -7,8 +7,8 @@ import HeroSlider from "./HeroSlider";
 
 const HeroSection = () => {
   return (
-    <div className="grid md:grid-cols-12 gap-10 mt-10">
-      <div className="hero-banner  col-span-7 px-8 py-3 md:px-16 md:py-48 w-[375px] md:w-full">
+    <div className="grid md:grid-cols-12 gap-10 mt-5 md:mt-10">
+      <div className="hero-banner  col-span-7 px-8 py-5 md:px-16 md:py-48 w-[375px] md:w-full">
         <p className="bg-[#E85363] w-[200px] text-center py-1 rounded-tr-lg rounded-bl-lg">
           100% Fresh Food
         </p>
@@ -18,7 +18,7 @@ const HeroSection = () => {
         <p className="mt-3 text-xl font-semibold text-[#E85363]">
           Good For All
         </p>
-        <button className="mt-5 bg-[#5DD2C0] px-5 py-2 rounded-md  text-white font-medium">
+        <button className="mt-2 md:mt-5 bg-[#5DD2C0] px-5 py-2 rounded-md  text-white font-medium">
           Shop Now
         </button>
       </div>

@@ -14,7 +14,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="footerImg pt-10 mt-16">
-      <div className="md:w-[90%] mx-auto grid md:grid-cols-6 mt-7 gap-16">
+      <div className="md:w-[90%] mx-auto grid grid-cols-2 md:grid-cols-6 mt-7 gap-5 md:gap-16 p-5 md:p-0">
         <div className="">
           <Image src={logo} alt="logo"></Image>
           <p className="mt-3">
@@ -124,7 +124,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="w-[90%] mx-auto mt-7">
+      <div className="w-[90%] mx-auto mt-7 mb-16 md:mb-0">
         <div className="bg-[#5DD2C0] py-[2px]"></div>
         <FooterBottom></FooterBottom>
         <div className="bg-[#5DD2C0] py-[2px] mt-7"></div>

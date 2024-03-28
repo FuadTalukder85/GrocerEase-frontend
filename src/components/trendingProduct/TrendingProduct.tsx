@@ -16,7 +16,7 @@ const TrendingProduct = ({
   return (
     <div className="mt-7">
       <div className="flex justify-between">
-        <h1 className="text-3xl font-semibold text-[#333333]">
+        <h1 className="text-xl md:text-3xl font-semibold text-[#333333]">
           Trending Products
         </h1>
         <Link href="/product">
@@ -25,7 +25,7 @@ const TrendingProduct = ({
           </h1>
         </Link>
       </div>
-      <div className="grid md:grid-cols-6 gap-5 mt-5">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-5 mt-5">
         {trendingProduct.slice(0, 6).map((product) => (
           <div
             key={product._id}
@@ -46,13 +46,12 @@ const TrendingProduct = ({
                 readOnly
               />
             </div>
-            <div className="flex justify-between mt-3 px-7 mb-3">
+            <div className="flex justify-between mt-3 px-3 items-center md:px-7 mb-3">
               <p>
-                <a href="" className="link text-[#3BB77E] text-lg font-medium">
-                  $59
-                </a>
+                ${product.price}{" "}
+                <small className="line-through">${product.discount}</small>
               </p>
-              <button className="flex items-center gap-2 bg-[#cefff8] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
+              <button className="flex items-center gap-2 bg-[#cefff8] md:px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
                 <IoMdCart className="text-[#E85363]" />
                 Add
               </button>

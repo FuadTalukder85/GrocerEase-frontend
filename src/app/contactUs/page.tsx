@@ -11,7 +11,7 @@ import ContactForm from "@/components/contactForm/ContactForm";
 const ContactUs = () => {
   return (
     <div>
-      <div className="flex gap-28 justify-center items-center mt-10">
+      <div className="md:flex gap-28 justify-center items-center mt-10">
         <div>
           <h1 className="text-5xl font-semibold text-[#333333] max-w-[10ch]">
             How can we help you?
@@ -24,7 +24,7 @@ const ContactUs = () => {
             <FaYoutube />
           </div>
         </div>
-        <div>
+        <div className="mt-10 md:mt-0">
           <Image src={mapImg} alt="mapImg"></Image>
         </div>
       </div>

@@ -15,7 +15,7 @@ const AlltrendintProducts = ({
       <h1 className="text-3xl font-semibold text-[#333333]">
         Top Trending Products
       </h1>
-      <div className="grid grid-cols-6 gap-5 mt-5">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-5 mt-5">
         {trendingProduct.map((product) => (
           <div
             key={product._id}

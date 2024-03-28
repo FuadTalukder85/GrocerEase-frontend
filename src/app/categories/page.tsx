@@ -14,7 +14,7 @@ const Categories = () => {
       <h1 className="text-3xl font-semibold text-[#333333]">
         Shop by Categories
       </h1>
-      <div className="grid grid-cols-6 gap-5 mt-5">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-5 mt-5">
         <Link href="/meat">
           <div className="bg-[#cefff86e] py-16 text-center">
             <Image src={categor1} className="mx-auto" alt="categoryImg"></Image>

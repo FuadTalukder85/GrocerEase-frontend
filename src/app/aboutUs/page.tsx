@@ -12,8 +12,8 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <div className="mt-28">
-      <div className="flex gap-10 justify-between items-center">
+    <div className="mt-10 md:mt-28">
+      <div className="md:flex gap-10 justify-between items-center">
         <div className="w-full">
           <Image
             className="rounded-2xl"
@@ -22,7 +22,7 @@ const AboutUs = () => {
           ></Image>
         </div>
         <div className="w-full">
-          <h1 className="text-3xl font-semibold text-[#333333]">
+          <h1 className="text-xl md:text-3xl font-semibold text-[#333333] mt-10 md:mt-0">
             Welcome to GrocerEase
           </h1>
           <p className="mt-5">
@@ -43,7 +43,7 @@ const AboutUs = () => {
             voluptatem placeat veniam dolores. Ipsum nesciunt ad repellat
             officiis.
           </p>
-          <div className="flex gap-5 justify-between mt-10">
+          <div className="flex gap-5 justify-between mt-10 pr-20 md:pr-o">
             <Image
               className="rounded-2xl"
               src={aboutUsImg1}
@@ -66,7 +66,7 @@ const AboutUs = () => {
         <h1 className="text-3xl font-semibold text-center text-[#333333] mt-28">
           What We Provide?
         </h1>
-        <div className="flex justify-between gap-10 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-10 mt-16">
           <div className="px-5 py-10 border">
             <Image
               className="rounded-2xl mx-auto"
