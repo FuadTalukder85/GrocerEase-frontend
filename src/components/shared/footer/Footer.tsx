@@ -47,19 +47,18 @@ const Footer = () => {
           <h1 className="text-2xl text-[#E85363] font-semibold">Popular</h1>
           <ul className="">
             <li className="mt-5">
-              <span>Trending Products</span>
+              <Link href="/trendingProducts">Trending Products</Link>
             </li>
-            <li className="mt-5">
+            <li className="mt-2">
               <Link href="/categories">Categories</Link>
             </li>
-
-            <li className="mt-5">
+            <li className="mt-2">
               <Link href="/aboutUs">About Us</Link>
             </li>
-            <li className="mt-5">
+            <li className="mt-2">
               <Link href="/contactUs">Contact Us</Link>
             </li>
-            <li className="mt-5">
+            <li className="mt-2">
               <Link href="/customerCare">Customer Care</Link>
             </li>
           </ul>

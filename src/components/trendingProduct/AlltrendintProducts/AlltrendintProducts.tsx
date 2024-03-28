@@ -1,13 +1,10 @@
 "use client";
+import React from "react";
 import { IoMdCart } from "react-icons/io";
-import { AllProductValues } from "../types.tsx/types";
 import Image from "next/image";
-import Link from "next/link";
-import { MdKeyboardArrowRight } from "react-icons/md";
-import { Rating } from "@smastrom/react-rating";
-import "@smastrom/react-rating/style.css";
+import { AllProductValues } from "@/components/types.tsx/types";
 
-const TrendingProduct = ({
+const AlltrendintProducts = ({
   trendingProduct,
 }: {
   trendingProduct: AllProductValues[];
@@ -15,37 +12,23 @@ const TrendingProduct = ({
   console.log(trendingProduct);
   return (
     <div className="mt-7">
-      <div className="flex justify-between">
-        <h1 className="text-3xl font-semibold text-[#333333]">
-          Trending Products
-        </h1>
-        <Link href="/product">
-          <h1 className="font-semibold text-[#333333] flex items-center gap-1">
-            See All <MdKeyboardArrowRight className="text-3xl" />
-          </h1>
-        </Link>
-      </div>
+      <h1 className="text-3xl font-semibold text-[#333333]">
+        Top Trending Products
+      </h1>
       <div className="grid grid-cols-6 gap-5 mt-5">
-        {trendingProduct.slice(0, 6).map((product) => (
+        {trendingProduct.map((product) => (
           <div
             key={product._id}
             className="bg-[#cefff86e] text-center shadow-xl"
           >
             <Image
               src={product.image}
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               className="mx-auto"
               alt="trendingImg"
             ></Image>
             <p className="text-xl font-semibold mt-5">{product.title}</p>
-            <div className="flex justify-center mt-2">
-              <Rating
-                style={{ maxWidth: 100 }}
-                value={product.rating}
-                readOnly
-              />
-            </div>
             <div className="flex justify-between mt-3 px-7 mb-3">
               <p>
                 <a href="" className="link text-[#3BB77E] text-lg font-medium">
@@ -64,4 +47,4 @@ const TrendingProduct = ({
   );
 };
 
-export default TrendingProduct;
+export default AlltrendintProducts;

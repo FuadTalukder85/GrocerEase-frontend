@@ -3,8 +3,8 @@
 const ErrorPage = () => {
   return (
     <div>
-      <h1 className="text-center text-2xl text-[#E85363]">
-        Something went wrong
+      <h1 className="text-center text-2xl text-[#E85363] mt-10">
+        Something went wrong...
       </h1>
     </div>
   );
