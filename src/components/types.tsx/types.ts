@@ -3,6 +3,8 @@ export type AllProductValues = {
   image: string;
   title: string;
   price: number;
+  discount: number;
+  rating: number;
   category: string;
   description: string;
 };

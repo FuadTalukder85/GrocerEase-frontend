@@ -6,6 +6,8 @@ import { FaPinterest } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { AllProductValues } from "../types.tsx/types";
 import Image from "next/image";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 
 const ProductDetailsCard = ({
   productDetails,
@@ -28,9 +30,23 @@ const ProductDetailsCard = ({
         <h1 className="text-3xl font-semibold text-[#333333]">
           {productDetails.title}
         </h1>
-        <p className="text-xl font-semibold text-[#E85363] mt-3 pb-3">
-          ${productDetails.price}
-        </p>
+        <div className="flex gap-5 items-center">
+          <div className="flex gap-2 items-center">
+            <p className="text-xl font-semibold text-[#E85363] mt-3 pb-3">
+              ${productDetails.price}
+            </p>
+            <p className="line-through  font-semibold text-[#E85363] mt-3 pb-3">
+              ${productDetails.discount}
+            </p>
+          </div>
+          <div>
+            <Rating
+              style={{ maxWidth: 100 }}
+              value={productDetails.rating}
+              readOnly
+            />
+          </div>
+        </div>
         <hr />
         <div className="flex gap-5">
           <button className="mt-5 bg-[#5DD2C0] px-5 py-2 rounded-md  text-white font-medium">
@@ -40,9 +56,12 @@ const ProductDetailsCard = ({
             Buy it now
           </button>
         </div>
-        <p className="mt-7 text-[#E85363] pb-3">
-          Please <a href="#">Contact Us</a> If You Are Interested In This
-          Product.
+        <p className="mt-7  pb-3">
+          Please{" "}
+          <a href="#" className="text-[#E85363] underline">
+            Contact Us
+          </a>{" "}
+          If You Are Interested In This Product.
         </p>
         <hr />
         <h3 className="mt-3 text-[#333333] font-semibold text-xl">

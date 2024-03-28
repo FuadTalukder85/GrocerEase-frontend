@@ -25,7 +25,8 @@ const Noodles = ({ noodlesItem }: { noodlesItem: AllProductValues[] }) => {
           </Link>
           <div className="flex justify-between px-5 pb-5 mt-3">
             <p>
-              {noodles.price} <small className="line-through">$89,74</small>
+              ${noodles.price}{" "}
+              <small className="line-through">${noodles.discount}</small>
             </p>
             <button className="flex items-center gap-2 bg-[#cefff8] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
               <IoMdCart className="text-[#E85363]" />

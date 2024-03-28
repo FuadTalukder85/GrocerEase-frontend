@@ -6,6 +6,8 @@ export type ProductValues = {
   image: string;
   title: string;
   price: number;
+  discount: number;
+  rating: number;
   category: string;
   description: string;
 };
@@ -36,7 +38,7 @@ const AddProducts = () => {
         <div className="">
           <div className="card w-[50%] mx-auto h-[80%] shadow-xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-              <div className="form-control mt-5">
+              <div className="form-control ">
                 <label className="label">
                   <span className="label-text">Image *</span>
                 </label>
@@ -46,10 +48,10 @@ const AddProducts = () => {
                   className="input input-bordered"
                 />
                 {errors.image && (
-                  <small className="text-red-500 mt-2">Image is required</small>
+                  <small className="text-red-500 ">Image is required</small>
                 )}
               </div>
-              <div className="form-control mt-5">
+              <div className="form-control ">
                 <label className="label">
                   <span className="label-text">Title *</span>
                 </label>
@@ -59,11 +61,11 @@ const AddProducts = () => {
                   className="input input-bordered"
                 />
                 {errors.title && (
-                  <small className="text-red-500 mt-2">Title is required</small>
+                  <small className="text-red-500 ">Title is required</small>
                 )}
               </div>
               <div className="flex justify-between gap-5">
-                <div className="form-control mt-5 w-full">
+                <div className="form-control  w-full">
                   <label className="label">
                     <span className="label-text">Price *</span>
                   </label>
@@ -75,12 +77,42 @@ const AddProducts = () => {
                     className="input input-bordered"
                   />
                   {errors.price && (
-                    <small className="text-red-500 mt-2">
-                      Price is required
-                    </small>
+                    <small className="text-red-500 ">Price is required</small>
                   )}
                 </div>
-                <div className="form-control mt-5 w-full">
+                <div className="form-control  w-full">
+                  <label className="label">
+                    <span className="label-text">Discount price *</span>
+                  </label>
+                  <input
+                    type="number"
+                    min={1}
+                    {...register("discount", { required: true })}
+                    placeholder="discount"
+                    className="input input-bordered"
+                  />
+                  {errors.discount && (
+                    <small className="text-red-500 ">Price is required</small>
+                  )}
+                </div>
+              </div>
+              <div className="flex justify-between gap-5">
+                <div className="form-control  w-full">
+                  <label className="label">
+                    <span className="label-text">Rating *</span>
+                  </label>
+                  <input
+                    type="number"
+                    min={1}
+                    {...register("rating", { required: true })}
+                    placeholder="rating"
+                    className="input input-bordered"
+                  />
+                  {errors.price && (
+                    <small className="text-red-500 ">Rating is required</small>
+                  )}
+                </div>
+                <div className="form-control  w-full">
                   <label className="label">
                     <span className="label-text">Category *</span>
                   </label>
@@ -100,13 +132,13 @@ const AddProducts = () => {
                     <option value="fastfood">FastFood</option>
                   </select>
                   {errors.category && (
-                    <small className="text-red-500 mt-2">
+                    <small className="text-red-500 ">
                       Category is required
                     </small>
                   )}
                 </div>
               </div>
-              <div className="form-control mt-5">
+              <div className="form-control ">
                 <label className="label">
                   <span className="label-text">Description *</span>
                 </label>
@@ -116,7 +148,7 @@ const AddProducts = () => {
                   className="input input-bordered"
                 />
                 {errors.description && (
-                  <small className="text-red-500 mt-2">
+                  <small className="text-red-500 ">
                     Description is required
                   </small>
                 )}

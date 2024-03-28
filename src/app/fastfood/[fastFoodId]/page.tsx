@@ -1,7 +1,6 @@
 "use server";
 
-import FastFoodDetailsCard from "@/components/categoryCard/FishDetailsCard";
-import FishDetailsCard from "@/components/categoryCard/FishDetailsCard";
+import FastfoodDetailsCard from "@/components/categoryCard/FastfoodDetailsCard";
 
 type FastFoodId = {
   params: {
@@ -18,9 +17,9 @@ const fishDetails = async ({ params }: FastFoodId) => {
   console.log(fishDetails);
   return (
     <div>
-      <FastFoodDetailsCard
+      <FastfoodDetailsCard
         fastFoodDetails={fastFoodDetails}
-      ></FastFoodDetailsCard>
+      ></FastfoodDetailsCard>
     </div>
   );
 };
