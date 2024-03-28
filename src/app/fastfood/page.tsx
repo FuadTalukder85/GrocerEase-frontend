@@ -9,7 +9,7 @@ const fastfoodServer = async () => {
   const fastFoodItem = allProducts.filter(
     (item: FieldValues) => item?.category === "fastfood"
   );
-  console.log(fastFoodItem);
+
   return (
     <div>
       <Fastfood fastFoodItem={fastFoodItem}></Fastfood>

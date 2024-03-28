@@ -10,12 +10,11 @@ type FruitsId = {
 };
 
 const fruitsDetails = async ({ params }: FruitsId) => {
-  console.log(params);
   const res = await fetch(
     `${process.env.BACKEND_URL}/all-product/${params.fruitsId}`
   );
   const fruitsDetails = await res.json();
-  console.log(fruitsDetails);
+
   return (
     <div>
       <FruitsDetailsCard fruitsDetails={fruitsDetails}></FruitsDetailsCard>

@@ -9,7 +9,7 @@ const noodlesServer = async () => {
   const noodlesItem = allProducts.filter(
     (item: FieldValues) => item?.category === "noodles"
   );
-  console.log(noodlesItem);
+
   return (
     <div>
       <Noodles noodlesItem={noodlesItem}></Noodles>

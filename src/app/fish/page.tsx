@@ -10,7 +10,7 @@ const fishServer = async () => {
   const fishItem = allProducts.filter(
     (item: FieldValues) => item?.category === "fish"
   );
-  console.log(fishItem);
+
   return (
     <div>
       <Fish fishItem={fishItem}></Fish>

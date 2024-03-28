@@ -9,12 +9,11 @@ type ProductId = {
 };
 
 const ProductDetails = async ({ params }: ProductId) => {
-  console.log(params);
   const res = await fetch(
     `${process.env.BACKEND_URL}/all-product/${params.productId}`
   );
   const productDetails = await res.json();
-  console.log(productDetails);
+
   return (
     <div>
       <ProductDetailsCard productDetails={productDetails}></ProductDetailsCard>

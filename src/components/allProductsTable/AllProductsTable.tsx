@@ -15,7 +15,6 @@ const AllProductsTable = ({
   allProductsTable: AllProductValues[];
   allState: AllStateType;
 }) => {
-  console.log("allProductsTable >", allProductsTable);
   return (
     <div className="mt-5">
       <h1 className="text-xl md:text-3xl font-semibold text-[#333333]">

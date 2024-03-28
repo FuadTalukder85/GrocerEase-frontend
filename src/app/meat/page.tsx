@@ -9,7 +9,7 @@ const meatServer = async () => {
   const meatItem = allProducts.filter(
     (item: FieldValues) => item?.category === "meat"
   );
-  console.log(meatItem);
+
   return (
     <div>
       <Meat meatItem={meatItem}></Meat>

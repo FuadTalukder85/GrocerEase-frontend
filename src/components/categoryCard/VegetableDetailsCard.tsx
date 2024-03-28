@@ -14,7 +14,6 @@ const VegetableDetailsCard = ({
 }: {
   vegetableDetails: AllProductValues;
 }) => {
-  console.log(vegetableDetails);
   return (
     <div className="flex justify-between items-center gap-5 mt-10 p-28">
       <div className="w-full border">

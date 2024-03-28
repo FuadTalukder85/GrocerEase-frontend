@@ -12,7 +12,6 @@ const TrendingProduct = ({
 }: {
   trendingProduct: AllProductValues[];
 }) => {
-  console.log(trendingProduct);
   return (
     <div className="mt-7">
       <div className="flex justify-between">

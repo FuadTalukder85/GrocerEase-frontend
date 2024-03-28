@@ -9,7 +9,6 @@ const AlltrendintProducts = ({
 }: {
   trendingProduct: AllProductValues[];
 }) => {
-  console.log(trendingProduct);
   return (
     <div className="mt-7">
       <h1 className="text-3xl font-semibold text-[#333333]">

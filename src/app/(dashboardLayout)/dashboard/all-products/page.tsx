@@ -8,7 +8,7 @@ const AllProducts = async () => {
     },
   });
   const allProductsTable = await res.json();
-  console.log(allProductsTable);
+
   //
   const allStates = await fetch(`${process.env.BACKEND_URL}/all-stats`, {
     next: {
@@ -16,7 +16,7 @@ const AllProducts = async () => {
     },
   });
   const allState = await allStates.json();
-  console.log(allState);
+
   return (
     <div className="p-5">
       <AllProductsTable

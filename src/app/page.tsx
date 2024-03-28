@@ -10,12 +10,11 @@ const Home = async () => {
     },
   });
   const trendingProducts = await res.json();
-  console.log(trendingProducts);
 
   const trendingProduct = [...trendingProducts].sort(
     (a, b) => b.rating - a.rating
   );
-  console.log("trendingProduct", trendingProduct);
+
   return (
     <div>
       <HeroSection></HeroSection>

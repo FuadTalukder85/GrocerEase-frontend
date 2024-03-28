@@ -11,7 +11,6 @@ const AllProductPage = ({
 }: {
   allProducts: AllProductValues[];
 }) => {
-  console.log("allProducts home > ", allProducts);
   return (
     <div className="grid grid-cols-2 md:grid-cols-6 gap-5 mt-16">
       {allProducts.map((product) => (

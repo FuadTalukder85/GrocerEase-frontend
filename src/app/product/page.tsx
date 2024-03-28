@@ -9,7 +9,6 @@ const ProductServer = async () => {
     },
   });
   const allProducts = await res.json();
-  console.log(allProducts);
 
   return (
     <>
