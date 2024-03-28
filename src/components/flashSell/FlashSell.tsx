@@ -11,7 +11,7 @@ const FlashSell = () => {
         <h1 className="text-3xl font-semibold text-[#333333]">
           Today,s Flash Sale
         </h1>
-        <h1 className="text-xl font-semibold text-[#333333] flex items-center gap-1">
+        <h1 className="font-semibold text-[#333333] flex items-center gap-1">
           See All <MdKeyboardArrowRight className="text-3xl" />
         </h1>
       </div>

@@ -49,9 +49,10 @@ const Footer = () => {
             <li className="mt-5">
               <span>Trending Products</span>
             </li>
-            <li className="mt-2">
-              <span>Categories</span>
+            <li className="mt-5">
+              <Link href="/categories">Categories</Link>
             </li>
+
             <li className="mt-5">
               <Link href="/aboutUs">About Us</Link>
             </li>
