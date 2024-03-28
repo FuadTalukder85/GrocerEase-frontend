@@ -15,7 +15,7 @@ const FlashSell = () => {
           See All <MdKeyboardArrowRight className="text-3xl" />
         </h1>
       </div>
-      <div className="grid grid-cols-4 gap-5 mt-5">
+      <div className="grid md:grid-cols-4 gap-5 mt-5">
         <div className="border shadow-xl">
           <Image src={flashImg} alt="flashImg"></Image>
           <div className="p-5 px-10">

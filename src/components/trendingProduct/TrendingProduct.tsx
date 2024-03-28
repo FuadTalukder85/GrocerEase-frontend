@@ -25,7 +25,7 @@ const TrendingProduct = ({
           </h1>
         </Link>
       </div>
-      <div className="grid grid-cols-6 gap-5 mt-5">
+      <div className="grid md:grid-cols-6 gap-5 mt-5">
         {trendingProduct.slice(0, 6).map((product) => (
           <div
             key={product._id}

@@ -24,7 +24,7 @@ const ProductCategory = () => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-6 gap-5 mt-5">
+      <div className="grid MD:grid-cols-6 gap-5 mt-5">
         <Link href="/meat">
           <div className="bg-[#cefff86e] py-16 text-center">
             <Image src={categor1} className="mx-auto" alt="categoryImg"></Image>

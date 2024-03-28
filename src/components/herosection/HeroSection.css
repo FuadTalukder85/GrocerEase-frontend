@@ -2,9 +2,12 @@
   background-image: url(../../assets/heroImg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
+
 .hero-right {
   background-image: url(../../assets/heroImg2.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
