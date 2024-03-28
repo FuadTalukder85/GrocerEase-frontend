@@ -7,7 +7,6 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-import { IoCall } from "react-icons/io5";
 import "./Footer.css";
 import FooterBottom from "./FooterBottom";
 import Link from "next/link";
@@ -56,9 +55,10 @@ const Footer = () => {
             <li className="mt-5">
               <Link href="/aboutUs">About Us</Link>
             </li>
-            <li className="mt-2">
-              <span>Contact Us</span>
+            <li className="mt-5">
+              <Link href="/contactUs">Contact Us</Link>
             </li>
+
             <li className="mt-2">
               <span>Customer Care</span>
             </li>
