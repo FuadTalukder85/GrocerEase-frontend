@@ -58,9 +58,8 @@ const Footer = () => {
             <li className="mt-5">
               <Link href="/contactUs">Contact Us</Link>
             </li>
-
-            <li className="mt-2">
-              <span>Customer Care</span>
+            <li className="mt-5">
+              <Link href="/customerCare">Customer Care</Link>
             </li>
           </ul>
         </div>
