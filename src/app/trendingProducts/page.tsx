@@ -18,9 +18,7 @@ const TrendingProducts = async () => {
 
   return (
     <div>
-      <AlltrendintProducts
-        trendingProduct={trendingProduct}
-      ></AlltrendintProducts>
+      <AlltrendintProducts trendingProduct={trendingProduct} />
     </div>
   );
 };

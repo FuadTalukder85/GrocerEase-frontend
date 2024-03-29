@@ -16,7 +16,7 @@ const noodlesDetails = async ({ params }: NoodlesId) => {
   const noodlesDetails = await res.json();
   return (
     <div>
-      <NoodlesDetailsCard noodlesDetails={noodlesDetails}></NoodlesDetailsCard>
+      <NoodlesDetailsCard noodlesDetails={noodlesDetails} />
     </div>
   );
 };

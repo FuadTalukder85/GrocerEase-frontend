@@ -18,9 +18,7 @@ const fishDetails = async ({ params }: FastFoodId) => {
 
   return (
     <div>
-      <FastfoodDetailsCard
-        fastFoodDetails={fastFoodDetails}
-      ></FastfoodDetailsCard>
+      <FastfoodDetailsCard fastFoodDetails={fastFoodDetails} />
     </div>
   );
 };

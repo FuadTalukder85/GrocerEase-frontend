@@ -14,7 +14,7 @@ const fishServer = async () => {
 
   return (
     <div>
-      <Fish fishItem={fishItem}></Fish>
+      <Fish fishItem={fishItem} />
     </div>
   );
 };

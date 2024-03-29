@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className=" text-[#333333] text-center pt-3">
       <div className="">
-        <div className="md:grid grid-cols-9 gap-10 justify-center items-center">
+        <div className="md:grid grid-cols-10 gap-10 justify-center items-center">
           <div className="col-span-4">
             <div className="flex gap-7 items-center pt-4">
               <Link href="/" className="w-[150px]">
@@ -58,9 +58,7 @@ const Navbar = () => {
                 >
                   Product
                 </Link>
-                <li className="bg-[#5DD2C0] rounded text-white mt-2">
-                  Collection
-                </li>
+
                 <Link
                   href="/aboutUs"
                   className="bg-[#5DD2C0] rounded text-white mt-2"
@@ -87,7 +85,7 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-          <div className="col-span-3 hidden lg:flex">
+          <div className="col-span-4 hidden lg:flex justify-center">
             <ul className="menu menu-horizontal px-1 flex gap-10 text-lg font-medium">
               <Link href="/">Home</Link>
               <Link href="/product">Product</Link>

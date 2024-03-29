@@ -14,7 +14,7 @@ const fastfoodServer = async () => {
 
   return (
     <div>
-      <Fastfood fastFoodItem={fastFoodItem}></Fastfood>
+      <Fastfood fastFoodItem={fastFoodItem} />
     </div>
   );
 };

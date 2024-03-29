@@ -15,7 +15,7 @@ const ProductServer = async () => {
   return (
     <>
       {" "}
-      <AllProductPage allProducts={allProducts}></AllProductPage>
+      <AllProductPage allProducts={allProducts} />
     </>
   );
 };

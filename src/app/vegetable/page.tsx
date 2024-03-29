@@ -14,7 +14,7 @@ const vegetableServer = async () => {
 
   return (
     <div>
-      <Vegetable vegetableItem={vegetableItem}></Vegetable>
+      <Vegetable vegetableItem={vegetableItem} />
     </div>
   );
 };

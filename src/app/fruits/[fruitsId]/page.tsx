@@ -18,7 +18,7 @@ const fruitsDetails = async ({ params }: FruitsId) => {
 
   return (
     <div>
-      <FruitsDetailsCard fruitsDetails={fruitsDetails}></FruitsDetailsCard>
+      <FruitsDetailsCard fruitsDetails={fruitsDetails} />
     </div>
   );
 };

@@ -20,7 +20,7 @@ const Home = async () => {
       <HeroSection></HeroSection>
       <FlashSell></FlashSell>
       <ProductCategory></ProductCategory>
-      <TrendingProduct trendingProduct={trendingProduct}></TrendingProduct>
+      <TrendingProduct trendingProduct={trendingProduct} />
     </div>
   );
 };

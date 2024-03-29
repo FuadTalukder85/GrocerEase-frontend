@@ -17,7 +17,7 @@ const meatDetails = async ({ params }: MeatId) => {
 
   return (
     <div>
-      <MeatDetailsCard meatDetails={meatDetails}></MeatDetailsCard>
+      <MeatDetailsCard meatDetails={meatDetails} />
     </div>
   );
 };

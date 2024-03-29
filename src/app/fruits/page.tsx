@@ -15,7 +15,7 @@ const fishServer = async () => {
 
   return (
     <div>
-      <Fruits fruitsItem={fruitsItem}></Fruits>
+      <Fruits fruitsItem={fruitsItem} />
     </div>
   );
 };
