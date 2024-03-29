@@ -4,6 +4,8 @@ import AlltrendintProducts from "@/components/trendingProduct/AlltrendintProduct
 
 const TrendingProducts = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/all-product`, {
+    method: "GET",
+    cache: "no-store",
     next: {
       revalidate: 30,
     },

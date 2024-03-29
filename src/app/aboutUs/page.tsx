@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import aboutUsImg from "../../assets/aboutUs/aboutUs.png";
 import aboutUsImg1 from "../../assets/aboutUs/about-1.png";

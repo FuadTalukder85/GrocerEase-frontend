@@ -11,7 +11,10 @@ type FruitsId = {
 
 const fruitsDetails = async ({ params }: FruitsId) => {
   const res = await fetch(
-    `${process.env.BACKEND_URL}/all-product/${params.fruitsId}`
+    `${process.env.BACKEND_URL}/all-product/${params.fruitsId}`,
+    {
+      cache: "no-store",
+    }
   );
   const fruitsDetails = await res.json();
 

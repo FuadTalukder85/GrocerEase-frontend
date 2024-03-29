@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import img1 from "../../assets/customerCare/1.jpg";

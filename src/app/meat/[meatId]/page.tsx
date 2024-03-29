@@ -10,7 +10,10 @@ type MeatId = {
 
 const meatDetails = async ({ params }: MeatId) => {
   const res = await fetch(
-    `${process.env.BACKEND_URL}/all-product/${params.meatId}`
+    `${process.env.BACKEND_URL}/all-product/${params.meatId}`,
+    {
+      cache: "no-store",
+    }
   );
   const meatDetails = await res.json();
 

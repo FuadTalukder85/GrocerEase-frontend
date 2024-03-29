@@ -3,6 +3,8 @@ import React from "react";
 
 const AllProducts = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/all-product`, {
+    method: "GET",
+    cache: "no-store",
     next: {
       revalidate: 30,
     },
@@ -11,6 +13,8 @@ const AllProducts = async () => {
 
   //
   const allStates = await fetch(`${process.env.BACKEND_URL}/all-stats`, {
+    method: "GET",
+    cache: "no-store",
     next: {
       revalidate: 30,
     },

@@ -10,7 +10,10 @@ type FastFoodId = {
 
 const fishDetails = async ({ params }: FastFoodId) => {
   const res = await fetch(
-    `${process.env.BACKEND_URL}/all-product/${params.fastFoodId}`
+    `${process.env.BACKEND_URL}/all-product/${params.fastFoodId}`,
+    {
+      cache: "no-store",
+    }
   );
   const fastFoodDetails = await res.json();
 
