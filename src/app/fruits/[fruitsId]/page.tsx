@@ -1,6 +1,3 @@
-"use server";
-
-import FishDetailsCard from "@/components/categoryCard/FishDetailsCard";
 import FruitsDetailsCard from "@/components/categoryCard/FruitsDetailsCard";
 
 type FruitsId = {

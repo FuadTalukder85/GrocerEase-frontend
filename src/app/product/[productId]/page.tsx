@@ -1,5 +1,3 @@
-"use server";
-
 import ProductDetailsCard from "@/components/productDetailsCard/ProductDetailsCard";
 
 type ProductId = {

@@ -1,5 +1,3 @@
-"use server";
-
 import FastfoodDetailsCard from "@/components/categoryCard/FastfoodDetailsCard";
 
 type FastFoodId = {
