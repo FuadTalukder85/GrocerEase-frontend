@@ -1,3 +1,4 @@
+"use server";
 import Fastfood from "@/components/category/Fastfood";
 import { FieldValues } from "react-hook-form";
 

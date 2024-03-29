@@ -1,5 +1,5 @@
+"use server";
 import NoodlesDetailsCard from "@/components/categoryCard/NoodlesDetailsCard";
-
 type NoodlesId = {
   params: {
     noodlesId: string;

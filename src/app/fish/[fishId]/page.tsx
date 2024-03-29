@@ -1,5 +1,5 @@
+"use server";
 import FishDetailsCard from "@/components/categoryCard/FishDetailsCard";
-
 type FishId = {
   params: {
     fishId: string;
