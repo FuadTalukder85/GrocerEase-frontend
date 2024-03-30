@@ -15,7 +15,7 @@ export default function HeroSlider() {
       }}
       modules={[Pagination, Autoplay]}
       className="mySwiper"
-      // autoplay={{ delay: 2000 }}
+      autoplay={{ delay: 2000 }}
       navigation={true}
       breakpoints={{
         480: {

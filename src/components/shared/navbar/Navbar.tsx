@@ -89,7 +89,6 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1 flex gap-10 text-lg font-medium">
               <Link href="/">Home</Link>
               <Link href="/product">Product</Link>
-              <li>Collection</li>
               <Link href="/aboutUs">About Us</Link>
               <Link href="/dashboard">Dashboard</Link>
             </ul>
