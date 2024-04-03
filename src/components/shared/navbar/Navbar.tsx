@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className=" text-[#333333] text-center pt-3">
       <div className="">
         <div className="md:grid grid-cols-10 gap-10 justify-center items-center">
-          <div className="col-span-4">
+          <div className="col-span-3">
             <div className="flex gap-7 items-center pt-4">
               <Link href="/" className="w-[150px]">
                 <Image src={logo} alt="logo"></Image>
@@ -85,10 +85,12 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-          <div className="col-span-4 hidden lg:flex justify-center">
+          <div className="col-span-5 hidden lg:flex justify-center">
             <ul className="menu menu-horizontal px-1 flex gap-10 text-lg font-medium">
               <Link href="/">Home</Link>
+              <Link href="/categories">Categories</Link>
               <Link href="/product">Product</Link>
+              <Link href="/contsctUs">Contact Us</Link>
               <Link href="/aboutUs">About Us</Link>
               <Link href="/dashboard">Dashboard</Link>
             </ul>
