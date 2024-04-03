@@ -17,7 +17,7 @@ const AllProducts = async () => {
   });
   const allState = await allStates.json();
   return (
-    <div className="p-5">
+    <div className="md:p-5">
       <AllProductsTable
         allProductsTable={allProductsTable}
         allState={allState}
