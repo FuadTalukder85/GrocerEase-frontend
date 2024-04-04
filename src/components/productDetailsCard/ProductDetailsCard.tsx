@@ -8,6 +8,7 @@ import { AllProductValues } from "../types.tsx/types";
 import Image from "next/image";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
+import Link from "next/link";
 
 const ProductDetailsCard = ({
   productDetails,
@@ -57,9 +58,9 @@ const ProductDetailsCard = ({
         </div>
         <p className="mt-7  pb-3">
           Please{" "}
-          <a href="#" className="text-[#E85363] underline">
+          <Link href="/contactUs" className="text-[#E85363] underline">
             Contact Us
-          </a>{" "}
+          </Link>{" "}
           If You Are Interested In This Product.
         </p>
         <hr />

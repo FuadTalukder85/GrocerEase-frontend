@@ -1,48 +1,39 @@
-"use client";
 import { IoMdCart } from "react-icons/io";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import Image from "next/image";
-import { AllProductValues } from "../types.tsx/types";
-import Link from "next/link";
 
-const FlashSell = ({ flashSell }: { flashSell: AllProductValues[] }) => {
+import Link from "next/link";
+import FlashSaleCountDown from "@/components/FlashSaleCountDown/FlashSaleCountDown";
+import { AllProductValues } from "@/components/types.tsx/types";
+
+const FlashSell = async () => {
+  const res = await fetch(`${process.env.BACKEND_URL}/all-product`, {
+    next: {
+      revalidate: 30,
+    },
+  });
+  const product = await res.json();
   return (
     <div className="mt-16">
       <div className="flex justify-between">
         <h1 className="text-xl md:text-3xl font-semibold text-[#333333]">
           Today,s Flash Sale
         </h1>
-        <Link href={"/flash-sale"}>
-          <h1 className="font-semibold text-[#333333] flex items-center gap-1">
-            See All <MdKeyboardArrowRight className="text-3xl" />
-          </h1>
-        </Link>
       </div>
       <div className="grid grid-cols-12">
         <div className="col-span-4">
           <div className="text-center px-16">
-            <p className="mt-24 text-4xl font-semibold text-center text-[#E85363]">
-              UP TO 30%
+            <p className="text-4xl font-semibold text-[#333333] mt-16">
+              Offer will expire
             </p>
-            <p className="mt-10 text-xl">Weekly Discounts on</p>
-            <h1 className="mt-2 text-[#E85363] text-2xl font-semibold">
-              Fruits, Vegetables and Shacks
-            </h1>
-            <button className="mt-5 text-lg bg-[#cefff8] px-5 py-1 rounded-md text-[#3BB77E] font-medium">
-              View All
-            </button>
-            <p className="mt-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              modi at quo? Deleniti aut quod, quibusdam sit magni eveniet fugit
-              molestiae obcaecati deserunt repudiandae dolores, id aspernatur
-              beatae reprehenderit voluptas dignissimos similique tenetur
-              laborum nesciunt.
+            <FlashSaleCountDown></FlashSaleCountDown>
+            <p className="mt-10 text-4xl font-semibold text-[#E85363]">
+              UP TO 30%
             </p>
           </div>
         </div>
         <div className="col-span-8">
           <div className="grid md:grid-cols-2 gap-5 mt-5">
-            {flashSell.slice(2, 6).map((flashProduct) => (
+            {product.slice(0, 6).map((flashProduct: AllProductValues) => (
               <Link
                 href={`/product/${flashProduct?._id}`}
                 key={flashProduct._id}

@@ -9,18 +9,16 @@ const Home = async () => {
       revalidate: 30,
     },
   });
-  const trendingProducts = await res.json();
+  const product = await res.json();
 
-  const trendingProduct = [...trendingProducts].sort(
-    (a, b) => b.rating - a.rating
-  );
+  const productSort = [...product].sort((a, b) => b.rating - a.rating);
 
   return (
     <div>
       <HeroSection></HeroSection>
-      <FlashSell></FlashSell>
+      <FlashSell flashSell={product}></FlashSell>
       <ProductCategory></ProductCategory>
-      <TrendingProduct trendingProduct={trendingProduct} />
+      <TrendingProduct trendingProduct={productSort} />
     </div>
   );
 };
