@@ -28,13 +28,13 @@ const TrendingProduct = ({
         {trendingProduct.slice(0, 6).map((product) => (
           <div key={product._id} className="border shadow-xl">
             <Link href={`/product/${product._id}`}>
-              <div className="relative">
+              <div className="relative overflow-hidden">
                 <Image
                   src={product.image}
                   alt="product1"
                   width={300}
                   height={300}
-                  className="mx-auto"
+                  className="mx-auto hover:scale-110 transition-all"
                 ></Image>
                 <button className="absolute text-lg top-3 right-3 bg-[#cefff8] px-5 py-1 rounded-md text-[#3BB77E] font-medium">
                   -{product.discount}%

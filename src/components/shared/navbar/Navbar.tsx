@@ -53,10 +53,28 @@ const Navbar = () => {
                   Home
                 </Link>
                 <Link
+                  href="/category"
+                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                >
+                  Categories
+                </Link>
+                <Link
                   href="/product"
                   className="bg-[#5DD2C0] rounded text-white mt-2"
                 >
                   Product
+                </Link>
+                <Link
+                  href="/flash-sale"
+                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                >
+                  Flash Sale
+                </Link>
+                <Link
+                  href="/contactUs"
+                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                >
+                  Contact Us
                 </Link>
 
                 <Link
@@ -88,7 +106,7 @@ const Navbar = () => {
           <div className="col-span-5 hidden lg:flex justify-center">
             <ul className="menu menu-horizontal px-1 flex gap-10 text-lg font-medium">
               <Link href="/">Home</Link>
-              <Link href="/categories">Categories</Link>
+              <Link href="/category">Categories</Link>
               <Link href="/product">Product</Link>
               <Link href="/flash-sale">Flash Sale</Link>
               <Link href="/contactUs">Contact Us</Link>

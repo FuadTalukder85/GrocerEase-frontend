@@ -2,8 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import categor1 from "../../assets/slideImg1.jpg";
-import categor2 from "../../assets/slideImg2.jpg";
-import categor3 from "../../assets/slideImg3.jpg";
+import categor2 from "../../assets/Bananas-1.jpg";
+import categor3 from "../../assets/vagetable.jpeg";
 import categor4 from "../../assets/slideImg4.jpg";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -50,7 +50,7 @@ const Categories = () => {
                 width={500}
               ></Image>
               <p className="absolute top-[45%] left-[25%] text-xl md:text-3xl font-semibold text-white">
-                Fresh Peanuts
+                Fresh Banana
               </p>
             </div>
           </Link>

@@ -18,9 +18,9 @@ const FlashSell = ({ flashSell }: { flashSell: AllProductValues[] }) => {
           </h1>
         </Link>
       </div>
-      <div className="grid grid-cols-12">
+      <div className="md:grid grid-cols-12">
         <div className="col-span-4">
-          <div className="text-center px-16">
+          <div className="text-center md:px-16">
             <p className="mt-24 text-4xl font-semibold text-center text-[#E85363]">
               UP TO 30%
             </p>
@@ -41,7 +41,7 @@ const FlashSell = ({ flashSell }: { flashSell: AllProductValues[] }) => {
           </div>
         </div>
         <div className="col-span-8">
-          <div className="grid md:grid-cols-2 gap-5 mt-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5 items-center justify-center">
             {flashSell.slice(2, 6).map((flashProduct) => (
               <Link
                 href={`/product/${flashProduct?._id}`}
@@ -49,8 +49,9 @@ const FlashSell = ({ flashSell }: { flashSell: AllProductValues[] }) => {
               >
                 <div className="border shadow-xl">
                   <div className="flex w-full">
-                    <div className="relative w-[50%]">
+                    <div className="relative w-[50%] overflow-hidden">
                       <Image
+                        className="hover:scale-110 transition-all"
                         src={flashProduct.image}
                         alt="flashImg"
                         width={300}
@@ -60,16 +61,16 @@ const FlashSell = ({ flashSell }: { flashSell: AllProductValues[] }) => {
                         -{flashProduct.discount}%
                       </button>
                     </div>
-                    <div className="p-5 py-16 w-[50%]">
-                      <p className="text-[#E85363] text-2xl font-semibold text-center">
+                    <div className="p-2 md:p-5 py-5 md:py-16 w-[50%]">
+                      <p className="text-[#E85363] md:text-2xl font-semibold text-center">
                         {flashProduct.title}
                       </p>
                       <p className="mt-5 truncate">
                         {flashProduct.description}
                       </p>
-                      <div className="mt-5 flex text-xl justify-between">
+                      <div className="mt-5 flex md:text-xl justify-between">
                         <p>Price : ${flashProduct.price} </p>
-                        <button className="flex items-center gap-2 bg-[#cefff8] px-5 py-1 rounded-md text-lg text-[#3BB77E] font-medium">
+                        <button className="flex items-center gap-2 bg-[#cefff8] px-2 md:px-5 py-1 rounded-md md:text-lg text-[#3BB77E] font-medium">
                           <IoMdCart className="text-[#E85363]" />
                           Add
                         </button>

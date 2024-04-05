@@ -8,10 +8,7 @@ type ProductId = {
 
 const ProductDetails = async ({ params }: ProductId) => {
   const res = await fetch(
-    `${process.env.BACKEND_URL}/all-product/${params.productId}`,
-    {
-      cache: "no-store",
-    }
+    `${process.env.BACKEND_URL}/all-product/${params.productId}`
   );
   const productDetails = await res.json();
 

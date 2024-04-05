@@ -14,14 +14,14 @@ const AllProductPage = ({
   return (
     <div className="grid grid-cols-2 md:grid-cols-6 gap-5 mt-16">
       {allProducts.map((product) => (
-        <div key={product._id} className="border shadow-xl">
+        <div key={product._id} className="border shadow-xl overflow-hidden">
           <Link href={`/product/${product._id}`}>
             <Image
               src={product.image}
               alt="product1"
               width={150}
               height={150}
-              className="mx-auto"
+              className="mx-auto hover:scale-110 transition-all"
             ></Image>
             <div className="mt-5">
               <p className="text-[#E85363] font-semibold max-w-[15ch] mx-auto text-center">

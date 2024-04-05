@@ -1,10 +1,9 @@
 import { IoMdCart } from "react-icons/io";
 import Image from "next/image";
 import Link from "next/link";
-import FlashSaleCountDown from "@/components/FlashSaleCountDown/FlashSaleCountDown";
 import { AllProductValues } from "@/components/types.tsx/types";
 
-const FlashSell = async () => {
+const Category = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/all-product`, {
     next: {
       revalidate: 30,
@@ -13,37 +12,21 @@ const FlashSell = async () => {
   const product = await res.json();
   return (
     <div className="mt-16">
-      <div className="flex justify-between">
-        <h1 className="text-xl md:text-3xl font-semibold text-[#333333]">
-          Today,s Flash Sale
-        </h1>
-      </div>
       <div className="grid grid-cols-12">
-        <div className="col-span-12 md:col-span-4">
-          <div className="text-center px-16">
-            <p className="text-4xl font-semibold text-[#333333] mt-16">
-              Offer will expire
-            </p>
-            <FlashSaleCountDown></FlashSaleCountDown>
-            <p className="mt-10 text-4xl font-semibold text-[#E85363]">
-              UP TO 30%
-            </p>
-          </div>
-        </div>
-        <div className="col-span-12 md:col-span-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5 items-center justify-center">
-            {product.slice(0, 6).map((flashProduct: AllProductValues) => (
+        <div className="col-span-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5 items-center justify-center">
+            {product.map((flashProduct: AllProductValues) => (
               <Link
                 href={`/product/${flashProduct?._id}`}
                 key={flashProduct._id}
               >
                 <div className="border shadow-xl">
-                  <div className="flex w-full">
-                    <div className="relative w-[50%] overflow-hidden">
+                  <div className="flex md:w-full">
+                    <div className="relative md:w-[50%] overflow-hidden">
                       <Image
                         className="hover:scale-110 transition-all"
                         src={flashProduct.image}
-                        alt="flashImg"
+                        alt="categoryImg"
                         width={300}
                         height={300}
                       ></Image>
@@ -77,4 +60,4 @@ const FlashSell = async () => {
   );
 };
 
-export default FlashSell;
+export default Category;
