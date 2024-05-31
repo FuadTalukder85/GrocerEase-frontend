@@ -50,7 +50,7 @@ const Footer = () => {
               <Link href="/trendingProducts">Trending Products</Link>
             </li>
             <li className="mt-2">
-              <Link href="/categories">Categories</Link>
+              <Link href="/category">Category</Link>
             </li>
             <li className="mt-2">
               <Link href="/aboutUs">About Us</Link>

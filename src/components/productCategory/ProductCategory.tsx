@@ -8,12 +8,12 @@ import categor4 from "../../assets/slideImg4.jpg";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-const Categories = () => {
+const category = () => {
   return (
     <div className="mt-16">
       <div className="flex justify-between">
         <h1 className="text-xl md:text-3xl font-semibold text-[#333333]">
-          Shop by Categories
+          Shop by category
         </h1>
         <Link href="/category">
           <h1 className="font-semibold text-[#333333] flex items-center gap-1">
@@ -24,7 +24,7 @@ const Categories = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
         <div>
-          <Link href="/categories">
+          <Link href="/category">
             <div className="relative overflow-hidden">
               <Image
                 src={categor1}
@@ -40,7 +40,7 @@ const Categories = () => {
           </Link>
         </div>
         <div className="">
-          <Link href="/categories">
+          <Link href="/category">
             <div className="relative overflow-hidden">
               <Image
                 src={categor2}
@@ -54,7 +54,7 @@ const Categories = () => {
               </p>
             </div>
           </Link>
-          <Link href="/categories">
+          <Link href="/category">
             <div className="relative mt-5 overflow-hidden">
               <Image
                 src={categor3}
@@ -70,7 +70,7 @@ const Categories = () => {
           </Link>
         </div>
         <div>
-          <Link href="/categories">
+          <Link href="/category">
             <div className="relative overflow-hidden">
               <Image
                 src={categor4}
@@ -90,4 +90,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default category;
