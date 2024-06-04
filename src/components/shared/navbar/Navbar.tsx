@@ -8,11 +8,11 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <div className=" text-[#333333] text-center pt-3">
+    <div className=" text-[#333333] text-center">
       <div className="">
         <div className="md:grid grid-cols-10 gap-10 justify-center items-center">
           <div className="col-span-3">
-            <div className="flex gap-7 items-center pt-4">
+            <div className="flex gap-7 items-center pt-3">
               <Link href="/" className="w-[150px]">
                 <Image src={logo} alt="logo"></Image>
               </Link>
@@ -20,7 +20,7 @@ const Navbar = () => {
                 <input
                   type="text"
                   placeholder="Search your grocery"
-                  className="border py-3 ps-5 w-full rounded-full"
+                  className="border py-2 ps-5 w-full rounded-full"
                 />
               </div>
             </div>
@@ -49,45 +49,39 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content z-[1] p-2 shadow bg-[#E85363] rounded-box w-32 mt-12"
               >
-                <Link href="/" className="bg-[#5DD2C0] rounded text-white">
+                <Link href="/" className="bg-[#5DD2C0] rounded text-white mt-1">
                   Home
                 </Link>
                 <Link
                   href="/category"
-                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                  className="bg-[#5DD2C0] rounded text-white mt-1"
                 >
                   Category
                 </Link>
                 <Link
                   href="/product"
-                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                  className="bg-[#5DD2C0] rounded text-white mt-1"
                 >
                   Product
                 </Link>
                 <Link
                   href="/flash-sale"
-                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                  className="bg-[#5DD2C0] rounded text-white mt-1"
                 >
                   Flash Sale
                 </Link>
                 <Link
                   href="/contactUs"
-                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                  className="bg-[#5DD2C0] rounded text-white mt-1"
                 >
                   Contact Us
                 </Link>
 
                 <Link
                   href="/aboutUs"
-                  className="bg-[#5DD2C0] rounded text-white mt-2"
+                  className="bg-[#5DD2C0] rounded text-white mt-1"
                 >
                   About Us
-                </Link>
-                <Link
-                  href="/dashboard"
-                  className="bg-[#5DD2C0] rounded text-white mt-2"
-                >
-                  Dashboard
                 </Link>
               </ul>
               <ul className="flex gap-7 md:hidden justify-center items-center">
@@ -95,23 +89,21 @@ const Navbar = () => {
                   <IoMdCart className="text-[#E85363]" />
                   <span>Wishlist</span>
                 </li>
-                <li className="flex items-center gap-3 text-lg font-medium">
-                  <FaRegHeart className="text-[#E85363]" />
-                  <span>Cart</span>
-                </li>
+                <Link href="/dashboard" className="text-lg font-medium">
+                  Dashboard
+                </Link>
                 <li className="text-lg font-medium">Login</li>
               </ul>
             </div>
           </div>
           <div className="col-span-5 hidden lg:flex justify-center">
-            <ul className="menu menu-horizontal px-1 flex gap-10 text-lg font-medium">
+            <ul className="menu menu-horizontal px-1 flex gap-10 text-lg">
               <Link href="/">Home</Link>
               <Link href="/category">Category</Link>
               <Link href="/product">Product</Link>
               <Link href="/flash-sale">Flash Sale</Link>
               <Link href="/contactUs">Contact Us</Link>
               <Link href="/aboutUs">About Us</Link>
-              <Link href="/dashboard">Dashboard</Link>
             </ul>
           </div>
           <div className="col-span-2">
@@ -121,8 +113,7 @@ const Navbar = () => {
                 <span>Wishlist</span>
               </li>
               <li className="flex items-center gap-3 text-lg font-medium">
-                <FaRegHeart className="text-[#E85363]" />
-                <span>Cart</span>
+                <Link href="/dashboard">Dashboard</Link>
               </li>
               <li className="text-lg font-medium">Login</li>
             </ul>

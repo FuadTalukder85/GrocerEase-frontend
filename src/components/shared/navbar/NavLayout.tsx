@@ -5,7 +5,7 @@ import TopNav from "./TopNav";
 const NavLayout = () => {
   return (
     <div>
-      <div className="bg-[#5DD2C0] py-5">
+      <div className="bg-[#5DD2C0] pt-5">
         <div className="w-[90%] mx-auto">
           <TopNav></TopNav>
           <Navbar></Navbar>
