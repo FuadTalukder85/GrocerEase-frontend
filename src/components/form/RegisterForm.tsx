@@ -1,16 +1,30 @@
 "use client";
-import { useForm } from "react-hook-form";
+import { registerUser } from "@/utils/RegisterUser";
+import { SubmitHandler, useForm } from "react-hook-form";
+
+export type UserType = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+};
 
 const RegisterForm = () => {
-  const { register, handleSubmit, reset } = useForm();
-
-  const onSubmit = async () => {
-    // try {
-    //   await users(data).unwrap();
-    //   reset();
-    // } catch (error) {
-    //   console.error("Registration failed:", error);
-    // }
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<UserType>();
+  const onSubmit: SubmitHandler<UserType> = async (data) => {
+    try {
+      const res = await registerUser(data);
+      console.log(res);
+      reset();
+    } catch (err: any) {
+      console.error(err.message);
+      throw new Error(err.message);
+    }
   };
   return (
     <div className="hero max-w-screen-xl mx-auto bg-base-200 md:mt-16 p-10">
