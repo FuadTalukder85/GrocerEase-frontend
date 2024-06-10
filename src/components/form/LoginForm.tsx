@@ -1,7 +1,29 @@
+import { loginUser } from "@/utils/LoginUser";
 import Link from "next/link";
-import React from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+
+export type LoginUserType = {
+  email: string;
+  password: string;
+};
 
 const LoginForm = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<LoginUserType>();
+  const onSubmit: SubmitHandler<LoginUserType> = async (data) => {
+    try {
+      const res = await loginUser(data);
+      console.log(res);
+      reset();
+    } catch (err: any) {
+      console.error(err.message);
+      throw new Error(err.message);
+    }
+  };
   return (
     <div>
       <div className="card shrink-0 p-5">
@@ -14,10 +36,7 @@ const LoginForm = () => {
           </Link>
         </div>
 
-        <form
-          // onSubmit={handleSubmit(onSubmit)}
-          className="card-body p-0 mt-5"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="card-body p-0 mt-5">
           <div className="form-control">
             <label className="text-left" htmlFor="">
               Email <span className="text-[#E85363]">*</span>
@@ -26,7 +45,7 @@ const LoginForm = () => {
               type="email"
               placeholder="Email"
               className="input order border-[#dbd8d8] text-xs md:w-96 mt-3"
-              // {...register("email")}
+              {...register("email")}
             />
           </div>
           <div className="form-control">
@@ -37,7 +56,7 @@ const LoginForm = () => {
               type="password"
               placeholder="Password"
               className="input order border-[#dbd8d8] text-xs mt-3"
-              // {...register("password")}
+              {...register("password")}
             />
           </div>
 
