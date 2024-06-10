@@ -16,6 +16,7 @@ export default function HeroSlider() {
       modules={[Pagination, Autoplay]}
       className="mySwiper"
       autoplay={{ delay: 2000 }}
+      loop={true}
       navigation={true}
       breakpoints={{
         480: {
@@ -32,18 +33,6 @@ export default function HeroSlider() {
         },
       }}
     >
-      <SwiperSlide>
-        <SlideOne />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SlideTwo />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SlideThree />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SlideFour />
-      </SwiperSlide>
       <SwiperSlide>
         <SlideOne />
       </SwiperSlide>

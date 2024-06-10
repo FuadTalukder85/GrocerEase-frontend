@@ -1,6 +1,5 @@
 "use client";
 import { IoMdCart } from "react-icons/io";
-import { FaRegHeart } from "react-icons/fa";
 import logo from "../../../assets/logo.png";
 import Link from "next/link";
 
@@ -125,7 +124,7 @@ const Navbar = () => {
                   tabIndex={0}
                   className="dropdown-content mt-3 p-2 rounded-box z-10 absolute right-0"
                 >
-                  <li className="bg-[#EFEDEC] rounded-sm">
+                  <li className="bg-white rounded-sm">
                     <LoginForm></LoginForm>
                   </li>
                 </ul>
