@@ -5,6 +5,7 @@ import logo from "../../../assets/logo.png";
 import Link from "next/link";
 
 import Image from "next/image";
+import LoginForm from "@/components/form/LoginForm";
 
 const Navbar = () => {
   return (
@@ -115,7 +116,20 @@ const Navbar = () => {
               <li className="flex items-center gap-3 text-lg font-medium">
                 <Link href="/dashboard">Dashboard</Link>
               </li>
-              <li className="text-lg font-medium">Login</li>
+
+              <div className="dropdown w-[420px] relative">
+                <div tabIndex={0} role="button">
+                  <p>Login</p>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content mt-3 p-2 rounded-box z-10 absolute right-0"
+                >
+                  <li className="bg-[#EFEDEC] rounded-sm">
+                    <LoginForm></LoginForm>
+                  </li>
+                </ul>
+              </div>
             </ul>
           </div>
         </div>
