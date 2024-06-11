@@ -1,3 +1,4 @@
+import { useUser } from "@/providers/useContext";
 import { loginUser } from "@/utils/LoginUser";
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -14,11 +15,19 @@ const LoginForm = () => {
     reset,
     formState: { errors },
   } = useForm<LoginUserType>();
+
+  const { setUser } = useUser();
+
   const onSubmit: SubmitHandler<LoginUserType> = async (data) => {
     try {
       const res = await loginUser(data);
+      if (res.success) {
+        localStorage.setItem("tokennn", res.token);
+        setUser(res);
+        reset();
+      }
+
       console.log(res);
-      reset();
     } catch (err: any) {
       console.error(err.message);
       throw new Error(err.message);
@@ -45,8 +54,13 @@ const LoginForm = () => {
               type="email"
               placeholder="Email"
               className="input order border-[#dbd8d8] text-xs md:w-96 mt-3"
-              {...register("email")}
+              {...register("email", { required: true })}
             />
+            {errors.email && (
+              <p className="text-xs text-[#E85363] text-left mt-2">
+                Plsease enter your email
+              </p>
+            )}
           </div>
           <div className="form-control">
             <label className="text-left" htmlFor="">
@@ -56,8 +70,13 @@ const LoginForm = () => {
               type="password"
               placeholder="Password"
               className="input order border-[#dbd8d8] text-xs mt-3"
-              {...register("password")}
+              {...register("password", { required: true })}
             />
+            {errors.password && (
+              <p className="text-xs text-[#E85363] text-left mt-2">
+                Plsease enter your password
+              </p>
+            )}
           </div>
 
           <div className="flex justify-between items-center mt-5">

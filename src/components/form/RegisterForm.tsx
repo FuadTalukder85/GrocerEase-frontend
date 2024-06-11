@@ -57,7 +57,7 @@ const RegisterForm = () => {
               <div className="form-control">
                 <input
                   type="email"
-                  placeholder="email"
+                  placeholder="Email"
                   className="input order border-[#dbd8d8] text-xs"
                   {...register("email")}
                 />
@@ -65,7 +65,7 @@ const RegisterForm = () => {
               <div className="form-control">
                 <input
                   type="password"
-                  placeholder="password"
+                  placeholder="Password"
                   className="input order border-[#dbd8d8] text-xs"
                   {...register("password")}
                 />

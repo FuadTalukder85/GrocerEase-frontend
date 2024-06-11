@@ -5,8 +5,10 @@ import Link from "next/link";
 
 import Image from "next/image";
 import LoginForm from "@/components/form/LoginForm";
+import { useUser } from "@/providers/useContext";
 
 const Navbar = () => {
+  const { user, logout } = useUser();
   return (
     <div className=" text-[#333333] text-center">
       <div className="">
@@ -115,6 +117,8 @@ const Navbar = () => {
               <li className="flex items-center gap-3 text-lg font-medium">
                 <Link href="/dashboard">Dashboard</Link>
               </li>
+
+              {user ? <li onClick={logout}>logout</li> : <li>login</li>}
 
               <div className="dropdown w-[420px] relative">
                 <div tabIndex={0} role="button">
